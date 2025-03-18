@@ -33,23 +33,17 @@ groupComparisonTMT(
 
 \item{save_fitted_models}{logical, if TRUE, fitted models will be added to}
 
-\item{use_log_file}{logical. If TRUE, information about data processing
-will be saved to a file.}
+\item{use_log_file}{logical. If TRUE, information about data processing will be saved to a file.}
 
-\item{append}{logical. If TRUE, information about data processing will be added
-to an existing log file.}
+\item{append}{logical. If TRUE, information about data processing will be added to an existing log file.}
 
-\item{verbose}{logical. If TRUE, information about data processing wil be printed
-to the console.}
+\item{verbose}{logical. If TRUE, information about data processing wil be printed to the console.}
 
-\item{log_file_path}{character. Path to a file to which information about 
-data processing will be saved. 
-If not provided, such a file will be created automatically.
-If `append = TRUE`, has to be a valid path to a file.}
+\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If `append = TRUE`, has to be a valid path to a file.}
 }
 \value{
-a list that consists of the following elements: 
-(1) ComparisonResult: statistical testing results; 
+a list that consists of the following elements:
+(1) ComparisonResult: statistical testing results;
 (2) FittedModel: the fitted linear models
 }
 \description{
@@ -60,9 +54,9 @@ Experimental design of case-control study (patients are not repeatedly measured)
 data(input.pd)
 # use protein.summarization() to get protein abundance data
 quant.pd.msstats = proteinSummarization(input.pd,
-                                       method="msstats",
-                                       global_norm=TRUE,
-                                       reference_norm=TRUE)
+                                       method = "msstats",
+                                       global_norm = TRUE,
+                                       reference_norm = TRUE)
 
 test.pairwise = groupComparisonTMT(quant.pd.msstats, moderated = TRUE)
 head(test.pairwise$ComparisonResult)
@@ -71,13 +65,13 @@ head(test.pairwise$ComparisonResult)
 levels(quant.pd.msstats$ProteinLevelData$Condition)
 
 # Compare condition 1 and 0.125
-comparison=matrix(c(-1,0,0,1),nrow=1)
+comparison = matrix(c(-1, 0, 0, 1), nrow = 1)
 
 # Set the nafmes of each row
-row.names(comparison)="1-0.125"
+row.names(comparison) = "1 - 0.125"
 
 # Set the column names
-colnames(comparison)= c("0.125", "0.5", "0.667", "1")
+colnames(comparison) = c("0.125", "0.5", "0.667", "1")
 test.contrast = groupComparisonTMT(data = quant.pd.msstats,
 contrast.matrix = comparison,
 moderated = TRUE)

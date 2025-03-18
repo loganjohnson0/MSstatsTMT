@@ -17,12 +17,12 @@
 
 \item{annotation}{data.table with run and channel annotation}
 
-\item{impute}{only for method="msstats". TRUE (default) imputes missing 
-values by Accelated failure model. FALSE uses minimum value to impute the 
+\item{impute}{only for method="msstats". TRUE (default) imputes missing
+values by Accelated failure model. FALSE uses minimum value to impute the
 missing value for each peptide precursor ion.}
 
-\item{max_quantile_censored}{We assume missing values are censored. 
-maxQuantileforCensored is Maximum quantile for deciding censored missing 
+\item{max_quantile_censored}{We assume missing values are censored.
+maxQuantileforCensored is Maximum quantile for deciding censored missing
 value, for instance, 0.999. Default is Null.}
 
 \item{log_file_path}{path to a MSstats log file}

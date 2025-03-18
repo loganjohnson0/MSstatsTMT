@@ -32,8 +32,8 @@ dataProcessPlotsTMT(
 \item{type}{choice of visualization. "ProfilePlot" represents profile plot of log intensities across MS runs.
 "QCPlot" represents box plots of log intensities across channels and MS runs.}
 
-\item{featureName}{for "ProfilePlot" only, "Transition" (default) means 
-printing feature legend in transition-level; "Peptide" means printing feature 
+\item{featureName}{for "ProfilePlot" only, "Transition" (default) means
+printing feature legend in transition-level; "Peptide" means printing feature
 legend in peptide-level; "NA" means no feature legend printing.
 FALSE(Default) for Profile Plot and QC Plot uses the upper limit as rounded off maximum of log2(intensities) after normalization + 3..}
 
@@ -72,7 +72,7 @@ An output pdf file is automatically created with the default name of "ProfilePlo
 The command address can help to specify where to store the file as well as how to modify the beginning of the file name.
 If address=FALSE, plot will be not saved as pdf file but showed in window.}
 
-\item{isPlotly}{Parameter to use Plotly or ggplot2. If set to TRUE, MSstats 
+\item{isPlotly}{Parameter to use Plotly or ggplot2. If set to TRUE, MSstats
 will save Plotly plots as HTML files. If set to FALSE MSstats will save ggplot2 plots
 as PDF files}
 }
@@ -81,7 +81,7 @@ plot or pdf
 }
 \description{
 To illustrate the quantitative data and quality control of MS runs,
-dataProcessPlotsTMT takes the quantitative data  and summarized data from function `proteinSummarization` as input 
+dataProcessPlotsTMT takes the quantitative data  and summarized data from function `proteinSummarization` as input
 and generate two types of figures in pdf files as output :
 (1) profile plot (specify "ProfilePlot" in option type), to identify the potential sources of variation for each protein;
 (2) quality control plot (specify "QCPlot" in option type), to evaluate the systematic bias between MS runs and channels.
@@ -104,5 +104,5 @@ dataProcessPlotsTMT(data=quant.msstats,
                     # type='QCPlot',
                     # width = 21,
                     # height = 7)
-                    
+
 }

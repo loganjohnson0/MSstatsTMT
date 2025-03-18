@@ -13,8 +13,8 @@ test.pairwise
 \description{
 It is the output of groupComparisonTMT function,
 which is made from \code{\link{quant.pd.msstats}}.
-It is a list that consists of the following elements: 
-(1) ComparisonResult: statistical testing results; 
+It is a list that consists of the following elements:
+(1) ComparisonResult: statistical testing results;
 (2) FittedModel: the fitted linear models
 ComparisonResult should include the columns as below.
 }
@@ -27,13 +27,13 @@ ComparisonResult should include the columns as below.
   \item DF: Degree of freedom
   \item pvalue: Value of p statistic of the test
   \item adj.pvalue: adjusted p value
-  \item issue: used for indicating the reason why a comparison is not testable. NA means the comparison is testable. 
+  \item issue: used for indicating the reason why a comparison is not testable. NA means the comparison is testable.
   'oneConditionMissing' means the protein has no measurements in one conndition of the comparison.
-  Furtherone, when 'issue = oneConditionMissing', 'log2FC = Inf' means the negative condition 
-  (with coefficient -1 in the Label column)  is missing and 'log2FC = -Inf' means 
+  Furtherone, when 'issue = oneConditionMissing', 'log2FC = Inf' means the negative condition
+  (with coefficient -1 in the Label column)  is missing and 'log2FC = -Inf' means
   the positive condition (with coefficient 1 in the Label column)  is missing.
   completeMissing' means the protein has no measurements in all the connditions of the comparison.
-  unfittableModel' means there is no enough measurements to fit the linear model. 
+  unfittableModel' means there is no enough measurements to fit the linear model.
   In other words, each condition has only one measurement.
 }
 }

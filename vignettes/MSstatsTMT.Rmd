@@ -27,6 +27,7 @@ Load MSstatsTMT first. Then you are ready to start MSstatsTMT
 # BiocManager::install("MSstatsTMT")
 
 library(MSstatsTMT)
+
 ```
 
 This vignette summarizes the introduction and various options of all functionalities in MSstatsTMT. 
@@ -46,7 +47,7 @@ MSstatsTMT includes the following three steps for statistical testing:
 `MSstatsTMT` performs statistical analysis steps, that follow peptide identification and quantitation. Therefore, input to MSstatsTMT is the output of other software tools (such as `Proteome Discoverer`, `MaxQuant` and so on) that read raw spectral files
 , identify and quantify peptide ions. The preferred structure of data for use in MSstatsTMT is a .csv file in a *long* format with at least 9 columns representing the following variables: **ProteinName**, **PeptideSequence**, **Charge**, **PSM**, **Channel**, **Condition**, **BioReplicate**, **Mixture**, **Intensity**. The variable names are fixed, but are case-insensitive.
 
-```{r, eval=T, echo=F, warning=F}
+```{r, eval = T, echo = F, warning = F}
 head(input.pd)
 ```
 
