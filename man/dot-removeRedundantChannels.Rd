@@ -9,9 +9,11 @@
 \arguments{
 \item{input}{data.table processed by the protein summarization function}
 
-\item{remove_empty_channel}{TRUE(default) removes 'Empty' channels from protein level data.}
+\item{remove_empty_channel}{TRUE (default) removes 'Empty'
+channels from protein level data.}
 
-\item{remove_norm_channel}{TRUE(default) removes 'Norm' channels from protein level data.}
+\item{remove_norm_channel}{TRUE (default) removes 'Norm' channels from
+protein-level data.}
 }
 \value{
 data.table

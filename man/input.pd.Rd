@@ -11,23 +11,23 @@ A data frame with 20110 rows and 11 variables.
 input.pd
 }
 \description{
-It is made from \code{\link{raw.pd}} and \code{\link{annotation.pd}},
+It is made from \code{\link[=raw.pd]{raw.pd()}} and \code{\link[=annotation.pd]{annotation.pd()}},
 which is the output of PDtoMSstatsTMTFormat function.
 It should include the required columns as below.
 }
 \details{
 \itemize{
-  \item ProteinName : Protein ID
-  \item PeptideSequence : peptide sequence
-  \item Charge : peptide charge
-  \item PSM : peptide ion and spectra match
-  \item Channel : Labeling information (126, ... 131)
-  \item Condition : Condition (ex. Healthy, Cancer, Time0)
-  \item BioReplicate : Unique ID for biological subject.
-  \item Run : MS run ID
-  \item Mixture : Unique ID for TMT mixture.
-  \item TechRepMixture : Unique ID for technical replicate of one TMT mixture.
-  \item Intensity: Protein Abundance
+\item ProteinName : Protein ID
+\item PeptideSequence : peptide sequence
+\item Charge : peptide charge
+\item PSM : peptide ion and spectra match
+\item Channel : Labeling information (126, ... 131)
+\item Condition : Condition (ex. Healthy, Cancer, Time0)
+\item BioReplicate : Unique ID for biological subject.
+\item Run : MS run ID
+\item Mixture : Unique ID for TMT mixture.
+\item TechRepMixture : Unique ID for technical replicate of one TMT mixture.
+\item Intensity: Protein Abundance
 }
 }
 \examples{

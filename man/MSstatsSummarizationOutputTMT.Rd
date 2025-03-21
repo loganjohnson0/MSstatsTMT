@@ -16,9 +16,11 @@ MSstatsSummarizationOutputTMT(
 
 \item{processed}{output of the getProcessedTMT function}
 
-\item{remove_empty_channel}{TRUE(default) removes 'Empty' channels from protein level data.}
+\item{remove_empty_channel}{TRUE (default) removes 'Empty'
+channels from protein level data.}
 
-\item{remove_norm_channel}{TRUE(default) removes 'Norm' channels from protein level data.}
+\item{remove_norm_channel}{TRUE (default) removes 'Norm' channels from
+protein-level data.}
 }
 \value{
 list that consists of two data.frames with feature-level and protein-level data

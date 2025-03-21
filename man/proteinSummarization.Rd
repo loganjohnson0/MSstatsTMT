@@ -2,7 +2,7 @@
 % Please edit documentation in R/proteinSummarization.R
 \name{proteinSummarization}
 \alias{proteinSummarization}
-\title{Summarizing peptide level quantification to protein level quantification}
+\title{Summarize into proteins}
 \usage{
 proteinSummarization(
   data,
@@ -21,28 +21,43 @@ proteinSummarization(
 )
 }
 \arguments{
-\item{data}{Name of the output of PDtoMSstatsTMTFormat function or peptide-level quantified data from other tools.
-It should have columns ProteinName, PeptideSequence, Charge, PSM, Mixture, TechRepMixture, Run, Channel, Condition, BioReplicate, Intensity}
+\item{data}{Name of the output of PDtoMSstatsTMTFormat function or
+peptide-level quantified data from other tools. It should have columns
+ProteinName, PeptideSequence, Charge, PSM, Mixture, TechRepMixture,
+Run, Channel, Condition, BioReplicate, and Intensity.}
 
-\item{method}{Four different summarization methods to protein-level can be performed : "msstats"(default), "MedianPolish", "Median", "LogSum".}
+\item{method}{Four different summarization methods to protein-level
+can be performed : "msstats"(default), "MedianPolish", "Median", "LogSum".}
 
-\item{global_norm}{Global median normalization on peptide level data (equalizing the medians across all the channels and MS runs). Default is TRUE.
-It will be performed before protein-level summarization.}
+\item{global_norm}{Global median normalization on peptide level data
+(equalizing the medians across all the channels and MS runs).
+Default is TRUE. It will be performed before protein-level summarization.}
 
-\item{reference_norm}{Reference channel based normalization between MS runs on protein level data.
-TRUE(default) needs at least one reference channel in each MS run, annotated by 'Norm' in Condtion column.
-It will be performed after protein-level summarization. FALSE will not perform this normalization step.
-If data only has one run, then reference_norm=FALSE.}
+\item{reference_norm}{Reference channel based normalization between MS runs
+on protein level data.
+\itemize{
+\item TRUE (default): needs at least one reference channel in each MS run,
+annotated by 'Norm' in Condtion column. It will be performed after
+protein-level summarization.
+\item FALSE: no reference channel normalization.
+If data only has one run, then reference_norm=FALSE.
+}}
 
-\item{remove_norm_channel}{TRUE(default) removes 'Norm' channels from protein level data.}
+\item{remove_norm_channel}{TRUE (default) removes 'Norm' channels from
+protein-level data.}
 
-\item{remove_empty_channel}{TRUE(default) removes 'Empty' channels from protein level data.}
+\item{remove_empty_channel}{TRUE (default) removes 'Empty'
+channels from protein level data.}
 
-\item{MBimpute}{only for method="msstats". TRUE (default) imputes missing values by Accelated failure model.
-FALSE uses minimum value to impute the missing value for each peptide precursor ion.}
+\item{MBimpute}{Only for method = "msstats".
+\itemize{
+\item TRUE (default): imputes missing values by Accelated failure model.
+\item FALSE: imputes the minimum value for each peptide precursor ion.
+}}
 
 \item{maxQuantileforCensored}{We assume missing values are censored.
-maxQuantileforCensored is Maximum quantile for deciding censored missing value, for instance, 0.999. Default is Null.}
+maxQuantileforCensored is Maximum quantile for deciding censored
+missing value, for instance, 0.999. Default is NULL.}
 
 \item{use_log_file}{logical. If TRUE, information about data processing will be saved to a file.}
 
@@ -50,7 +65,7 @@ maxQuantileforCensored is Maximum quantile for deciding censored missing value, 
 
 \item{verbose}{logical. If TRUE, information about data processing wil be printed to the console.}
 
-\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If `append = TRUE`, has to be a valid path to a file.}
+\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If \code{append = TRUE}, has to be a valid path to a file.}
 
 \item{msstats_log_path}{path to a MSstats log file}
 }
@@ -58,8 +73,10 @@ maxQuantileforCensored is Maximum quantile for deciding censored missing value, 
 list that consists of two data.frames with feature-level (FeatureLevelData) and protein-level data (ProteinLevelData)
 }
 \description{
-We assume missing values are censored and then impute the missing values. Protein-level summarization from peptide level quantification are performed.
-After all, global median normalization on peptide level data and normalization between MS runs using reference channels will be implemented.
+We assume missing values are censored and then impute the missing values.
+Protein-level summarization from peptide-level quantification is performed.
+Subsequently, global median normalization on peptide-level data and
+normalization between MS runs using reference channels will be implemented.
 }
 \examples{
 data(input.pd)

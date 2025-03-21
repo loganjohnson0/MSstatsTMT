@@ -19,16 +19,16 @@ The important variables are as follows:
 }
 \details{
 \itemize{
-  \item Proteins
-  \item Protein.group.IDs
-  \item Modified.sequence
-  \item Charge
-  \item Raw.file
-  \item Score
-  \item Potential.contaminant
-  \item Reverse
-  \item Channels : Reporter.intensity.corrected.0, ...,
-  Reporter.intensity.corrected.9
+\item Proteins
+\item Protein.group.IDs
+\item Modified.sequence
+\item Charge
+\item Raw.file
+\item Score
+\item Potential.contaminant
+\item Reverse
+\item Channels : Reporter.intensity.corrected.0, ...,
+Reporter.intensity.corrected.9
 }
 }
 \examples{

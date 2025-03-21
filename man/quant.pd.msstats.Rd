@@ -11,7 +11,7 @@ A data frame with 100 rows and 8 variables.
 quant.pd.msstats
 }
 \description{
-It is made from \code{\link{input.pd}}.
+It is made from \code{\link[=input.pd]{input.pd()}}.
 It is the output of proteinSummarization function.
 It is a list that consists of two data.frames with
 feature-level (FeatureLevelData) and protein-level data (ProteinLevelData).
@@ -19,14 +19,14 @@ ProteinLevelData should include the required columns as below.
 }
 \details{
 \itemize{
-  \item Run : MS run ID
-  \item Protein : Protein ID
-  \item Abundance: Protein-level summarized abundance
-  \item Channel : Labeling information (126, ... 131)
-  \item Condition : Condition (ex. Healthy, Cancer, Time0)
-  \item BioReplicate : Unique ID for biological subject.
-  \item TechRepMixture : Unique ID for technical replicate of one TMT mixture.
-  \item Mixture : Unique ID for TMT mixture.
+\item Run : MS run ID
+\item Protein : Protein ID
+\item Abundance: Protein-level summarized abundance
+\item Channel : Labeling information (126, ... 131)
+\item Condition : Condition (ex. Healthy, Cancer, Time0)
+\item BioReplicate : Unique ID for biological subject.
+\item TechRepMixture : Unique ID for technical replicate of one TMT mixture.
+\item Mixture : Unique ID for TMT mixture.
 }
 }
 \examples{

@@ -21,11 +21,11 @@ The important variables are as follows:
 }
 \details{
 \itemize{
-  \item id
-  \item Protein.IDs
-  \item Only.identified.by.site
-  \item Potential.contaminant
-  \item Reverse
+\item id
+\item Protein.IDs
+\item Only.identified.by.site
+\item Potential.contaminant
+\item Reverse
 }
 }
 \examples{

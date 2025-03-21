@@ -20,13 +20,13 @@ The important variables are as follows:
 }
 \details{
 \itemize{
-  \item PG.ProteinAccessions
-  \item P.MoleculeID
-  \item PP.Charge
-  \item R.FileName
-  \item PG.QValue
-  \item PSM.Qvalue
-  \item Channels : PSM.TMT6_126..Raw., ..., PSM.TMT6_131..Raw.
+\item PG.ProteinAccessions
+\item P.MoleculeID
+\item PP.Charge
+\item R.FileName
+\item PG.QValue
+\item PSM.Qvalue
+\item Channels : PSM.TMT6_126..Raw., ..., PSM.TMT6_131..Raw.
 }
 }
 \examples{

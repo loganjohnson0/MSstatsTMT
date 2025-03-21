@@ -4,13 +4,13 @@
 #'
 #' @section functions :
 #' \itemize{
-#'   \item \code{\link{PDtoMSstatsTMTFormat}} : generates MSstatsTMT required input format for Proteome discoverer output.
-#'   \item \code{\link{MaxQtoMSstatsTMTFormat}} : generates MSstatsTMT required input format for MaxQuant output.
-#'   \item \code{\link{SpectroMinetoMSstatsTMTFormat}} : generates MSstatsTMT required input format for SpectroMine output.
-#'   \item \code{\link{OpenMStoMSstatsTMTFormat}} : generates MSstatsTMT required input format for OpenMS output.
-#'   \item \code{\link{proteinSummarization}} : summarizes PSM level quantification to protein level quantification.
-#'   \item \code{\link{dataProcessPlotsTMT}} : visualizes for explanatory data analysis.
-#'   \item \code{\link{groupComparisonTMT}} : tests for significant changes in protein abundance across conditions.
+#'   \item [PDtoMSstatsTMTFormat()] : generates MSstatsTMT required input format for Proteome discoverer output.
+#'   \item [MaxQtoMSstatsTMTFormat()] : generates MSstatsTMT required input format for MaxQuant output.
+#'   \item [SpectroMinetoMSstatsTMTFormat()] : generates MSstatsTMT required input format for SpectroMine output.
+#'   \item [OpenMStoMSstatsTMTFormat()] : generates MSstatsTMT required input format for OpenMS output.
+#'   \item [proteinSummarization()] : summarizes PSM level quantification to protein level quantification.
+#'   \item [dataProcessPlotsTMT()] : visualizes for explanatory data analysis.
+#'   \item [groupComparisonTMT()] : tests for significant changes in protein abundance across conditions.
 #' }
 #'
 #' @keywords internal
@@ -242,7 +242,7 @@
 
 #' Example of output from PDtoMSstatsTMTFormat function
 #'
-#' It is made from \code{\link{raw.pd}} and \code{\link{annotation.pd}},
+#' It is made from [raw.pd()] and [annotation.pd()],
 #' which is the output of PDtoMSstatsTMTFormat function.
 #' It should include the required columns as below.
 #'
@@ -268,7 +268,7 @@
 
 #' Example of output from proteinSummarizaiton function
 #'
-#' It is made from \code{\link{input.pd}}.
+#' It is made from [input.pd()].
 #' It is the output of proteinSummarization function.
 #' It is a list that consists of two data.frames with
 #' feature-level (FeatureLevelData) and protein-level data (ProteinLevelData).
@@ -296,7 +296,7 @@
 #' Example of output from groupComparisonTMT function
 #'
 #' It is the output of groupComparisonTMT function,
-#' which is made from \code{\link{quant.pd.msstats}}.
+#' which is made from [quant.pd.msstats()].
 #' It is a list that consists of the following elements:
 #' (1) ComparisonResult: statistical testing results;
 #' (2) FittedModel: the fitted linear models

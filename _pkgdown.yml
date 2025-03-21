@@ -1,0 +1,37 @@
+url: ~
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#447099"
+    font_scale: 1.2
+    fg: "#172431"
+    bg: "#fcfcfc"
+    border-radius: 0
+    btn-border-radius: 3px
+    grid-gutter-width: 3rem
+    pkgdown-nav-height: 78px
+
+code:
+  width: 71
+
+navbar:
+  type: light
+  bg: none
+
+reference:
+- title: MSstatsTMT tools
+
+- subtitle: Converters
+  desc: >
+    Convert PSM files into MSstatsTMT format
+  contents:
+  - ends_with("toMSstatsTMTFormat")
+  - starts_with("annotation")
+  - evidence
+  - input.pd
+  - starts_with("raw")
+  - dataProcessPlotsTMT
+  - designSampleSizeTMT
+  - groupComparisonTMT
+  - proteinGroups
+  - proteinSummarization

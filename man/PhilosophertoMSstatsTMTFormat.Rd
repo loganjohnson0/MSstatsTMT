@@ -24,7 +24,7 @@ PhilosophertoMSstatsTMTFormat(
 )
 }
 \arguments{
-\item{input}{data.frame of `msstats.csv` file produced by Philosopher}
+\item{input}{data.frame of \code{msstats.csv} file produced by Philosopher}
 
 \item{annotation}{annotation with Run, Fraction, TechRepMixture, Mixture, Channel,
 BioReplicate, Condition columns or a path to file. Refer to the example 'annotation' for the meaning of each column. Channel column should be
@@ -59,12 +59,12 @@ select the feature with the largest summation or maximal value.}
 
 \item{verbose}{logical. If TRUE, information about data processing wil be printed to the console.}
 
-\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If `append = TRUE`, has to be a valid path to a file.}
+\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If \code{append = TRUE}, has to be a valid path to a file.}
 
-\item{...}{additional parameters to `data.table::fread`.}
+\item{...}{additional parameters to \code{data.table::fread}.}
 }
 \value{
-`data.frame` of class `MSstatsTMT`
+\code{data.frame} of class \code{MSstatsTMT}
 }
 \description{
 Convert Philosopher (Fragpipe) output to MSstatsTMT format.

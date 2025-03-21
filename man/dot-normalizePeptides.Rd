@@ -9,7 +9,7 @@
 \arguments{
 \item{input}{data.table}
 
-\item{normalize}{logical, if TRUE, `input` data will be normalized}
+\item{normalize}{logical, if TRUE, \code{input} data will be normalized}
 }
 \value{
 data.table

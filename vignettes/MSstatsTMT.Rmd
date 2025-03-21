@@ -1,12 +1,10 @@
 ---
-title: "MSstatsTMT : A package for protein significance analysis in shotgun mass spectrometry-based proteomic experiments with tandem mass tag (TMT) labeling"
-author: "Ting Huang (<thuang0703@gmail.com>), Meena Choi (<mnchoi67@gmail.com>), Mateusz Staniak (<mtst@mstaniak.pl>), Sicheng Hao (<hao.sic@husky.neu.edu>), Olga Vitek(<o.vitek@northeastern.edu>)"
-date: "`r Sys.Date()`"
+title: "Introduction to MSstatsTMT"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{MSstatsTMT User Guide}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  \usepackage[utf8]{inputenc}
 ---
 
 ```{r setup, include = FALSE}

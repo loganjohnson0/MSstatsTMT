@@ -7,7 +7,7 @@
 #'
 #' @param data 'FittedModel' in testing output from function groupComparisonTMT.
 #' @param desiredFC the range of a desired fold change which includes the lower
-#'    and upper values of the desired fold change.
+#'   and upper values of the desired fold change.
 #' @param FDR a pre-specified false discovery ratio (FDR) to control the overall
 #'   false positive rate. Default is 0.05
 #' @param numSample minimal number of biological replicates per condition.
@@ -45,12 +45,19 @@
 #'
 #' ## Calculate sample size for future experiments:
 #' #(1) Minimal number of biological replicates per condition
-#' designSampleSizeTMT(data=test.pairwise$FittedModel, numSample=TRUE,
-#'                  desiredFC=c(1.25,1.75), FDR=0.05, power=0.8)
+#' designSampleSizeTMT(
+#'   data = test.pairwise$FittedModel,
+#'   numSample = TRUE,
+#'   desiredFC = c(1.25, 1.75),
+#'   FDR = 0.05,
+#'   power = 0.8)
 #' #(2) Power calculation
-#' designSampleSizeTMT(data=test.pairwise$FittedModel, numSample=2,
-#'                  desiredFC=c(1.25,1.75), FDR=0.05, power=TRUE)
-#'
+#' designSampleSizeTMT(
+#'   data = test.pairwise$FittedModel,
+#'   numSample = 2,
+#'   desiredFC = c(1.25, 1.75),
+#'   FDR = 0.05,
+#'   power = TRUE)
 designSampleSizeTMT = function(
   data,
   desiredFC,

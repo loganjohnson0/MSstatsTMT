@@ -7,7 +7,7 @@
 .getPhilosopherInput(input, path, folder)
 }
 \arguments{
-\item{input}{data.frame of `msstats.csv` file produced by Philosopher}
+\item{input}{data.frame of \code{msstats.csv} file produced by Philosopher}
 }
 \description{
 Convert Philosopher parameters to consistent format

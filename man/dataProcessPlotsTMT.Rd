@@ -27,7 +27,7 @@ dataProcessPlotsTMT(
 )
 }
 \arguments{
-\item{data}{the output of \code{\link{proteinSummarization}} function. It is a list with data frames `FeatureLevelData` and `ProteinLevelData`}
+\item{data}{the output of \code{\link[=proteinSummarization]{proteinSummarization()}} function. It is a list with data frames \code{FeatureLevelData} and \code{ProteinLevelData}}
 
 \item{type}{choice of visualization. "ProfilePlot" represents profile plot of log intensities across MS runs.
 "QCPlot" represents box plots of log intensities across channels and MS runs.}
@@ -81,7 +81,7 @@ plot or pdf
 }
 \description{
 To illustrate the quantitative data and quality control of MS runs,
-dataProcessPlotsTMT takes the quantitative data  and summarized data from function `proteinSummarization` as input
+dataProcessPlotsTMT takes the quantitative data  and summarized data from function \code{proteinSummarization} as input
 and generate two types of figures in pdf files as output :
 (1) profile plot (specify "ProfilePlot" in option type), to identify the potential sources of variation for each protein;
 (2) quality control plot (specify "QCPlot" in option type), to evaluate the systematic bias between MS runs and channels.
@@ -89,15 +89,15 @@ and generate two types of figures in pdf files as output :
 \examples{
 data(input.pd)
 quant.msstats = proteinSummarization(input.pd,
-                                      method="msstats",
-                                      global_norm=TRUE,
-                                      reference_norm=TRUE)
+                                     method = "msstats",
+                                     global_norm = TRUE,
+                                     reference_norm = TRUE)
 
 ## Profile plot
-dataProcessPlotsTMT(data=quant.msstats,
-                   type='ProfilePlot',
-                   width = 21,
-                   height = 7)
+dataProcessPlotsTMT(data = quant.msstats,
+                    type = 'ProfilePlot',
+                    width = 21,
+                    height = 7)
 
 ## NottoRun: QC plot
 # dataProcessPlotsTMT(data=quant.msstats,

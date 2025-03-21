@@ -18,19 +18,19 @@ The important variables are as follows:
 }
 \details{
 \itemize{
-  \item RetentionTime
-  \item ProteinName
-  \item PeptideSequence
-  \item Charge
-  \item Channel
-  \item Condition
-  \item BioReplicate
-  \item Run
-  \item Mixture
-  \item TechRepMixture
-  \item Fraction
-  \item Intensity
-  \item Reference
+\item RetentionTime
+\item ProteinName
+\item PeptideSequence
+\item Charge
+\item Channel
+\item Condition
+\item BioReplicate
+\item Run
+\item Mixture
+\item TechRepMixture
+\item Fraction
+\item Intensity
+\item Reference
 }
 }
 \examples{

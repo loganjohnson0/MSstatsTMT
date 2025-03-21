@@ -1,22 +1,40 @@
-citHeader("To cite the MSstatsTMT package in publications use:")
-
-citEntry(entry="article",  
-         title  = "MSstatsTMT: Statistical detection of differentially abundant proteins in experiments with isobaric labeling and multiple mixtures",
-         author = personList(
-           person(given="Ting", family="Huang"),
-           person(given="Meena", family="Choi"),
-           person(given="Manuel", family="Tzouros"),
-           person(given="Sabrina", family="Golling"),
-           person(given="Nikhil Janak", family="Pandya"),
-           person(given="Balazs", family="Banfai"),
-           person(given="Tom", family="Dunkley"),
-           person(given="Olga", family="Vitek")),
-         journal = "Molecular & Cellular Proteomics",
-         volume = "19",
-         number = "10",
-         pages = "1706-1723",
-         year = "2020",
-         textVersion = paste("Huang, T., Choi, M., Tzouros, M., Golling, S., Pandya, N.J., Banfai, B., Dunkley, T. and Vitek, O.",
-           "MSstatsTMT: Statistical detection of differentially abundant proteins in experiments with isobaric labeling and multiple mixtures.",
-           "Molecular & Cellular Proteomics (2020),", "19(10), 1706-1723.")
+bibentry(
+  bibtype = "Article",
+  title = "MSstatsTMT: Statistical detection of differentially abundant proteins in experiments with isobaric labeling and multiple mixtures",
+  author = c(
+    person(
+      given = "Ting",
+      family = "Huang",
+      comment = c(ORCID = "0000-0003-1041-2167")
+    ),
+    person(
+      given = "Meena",
+      family = "Choi",
+      comment = c(ORCID = "0000-0002-6025-5035")
+    ),
+    person(given = "Manuel", family = "Tzouros"),
+    person(given = "Sabrina", family = "Golling"),
+    person(
+      given = c("Nikhil", "Janak"),
+      family = "Pandya",
+      comment = c(ORCID = "0000-0002-2286-0576")
+    ),
+    person(
+      given = "Balazs",
+      family = "Banfai",
+      comment = c(ORCID = "0000-0003-0422-7977")
+    ),
+    person(given = "Tom", family = "Dunkley"),
+    person(
+      given = "Olga",
+      family = "Vitek",
+      comment = c(ORCID = "0000-0003-1728-1104")
+    )
+  ),
+  journal = "Molecular & Cellular Proteomics",
+  year = 2020,
+  volume = 19,
+  number = 10,
+  pages = "1706 - 1723",
+  doi = "10.1074/mcp.RA120.002105"
 )

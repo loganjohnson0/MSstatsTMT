@@ -12,7 +12,7 @@
 #' @importFrom graphics axis image legend mtext par plot.new title plot
 #' @importFrom grDevices dev.off hcl pdf
 #' @importFrom plotly ggplotly style add_trace plot_ly subplot
-#' @param data the output of \code{\link{proteinSummarization}} function. It is a list with data frames `FeatureLevelData` and `ProteinLevelData`
+#' @param data the output of [proteinSummarization()] function. It is a list with data frames `FeatureLevelData` and `ProteinLevelData`
 #' @param type choice of visualization. "ProfilePlot" represents profile plot of log intensities across MS runs.
 #' "QCPlot" represents box plots of log intensities across channels and MS runs.
 #' @param ylimUp upper limit for y-axis in the log scale.
@@ -45,16 +45,18 @@
 #' @return plot or pdf
 #' @examples
 #' data(input.pd)
-#' quant.msstats = proteinSummarization(input.pd,
-#'                                       method="msstats",
-#'                                       global_norm=TRUE,
-#'                                       reference_norm=TRUE)
+#' quant.msstats = proteinSummarization(
+#'   input.pd,
+#'   method = "msstats",
+#'   global_norm = TRUE,
+#'   reference_norm = TRUE)
 #'
 #' ## Profile plot
-#' dataProcessPlotsTMT(data=quant.msstats,
-#'                    type='ProfilePlot',
-#'                    width = 21,
-#'                    height = 7)
+#' dataProcessPlotsTMT(
+#'   data = quant.msstats,
+#'   type = 'ProfilePlot',
+#'   width = 21,
+#'   height = 7)
 #'
 #' ## NottoRun: QC plot
 #' # dataProcessPlotsTMT(data=quant.msstats,
@@ -85,11 +87,16 @@ dataProcessPlotsTMT = function(
 ) {
   data.peptide <- data$FeatureLevelData
   data.summarization <- data$ProteinLevelData
+
   common_groups = intersect(
     data.peptide$Condition,
     data.summarization$Condition
   )
-  processed = .prepareDataForPlot(data.peptide, common_groups, "peptides")
+  processed = .prepareDataForPlot(
+    data.peptide,
+    common_groups,
+    "peptides"
+  )
   summarized = .prepareDataForPlot(
     data.summarization,
     common_groups,

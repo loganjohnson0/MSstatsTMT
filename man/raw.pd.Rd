@@ -20,14 +20,14 @@ The variables are as follows:
 }
 \details{
 \itemize{
-  \item Master.Protein.Accessions
-  \item Protein.Accessions
-  \item Annotated.Sequence
-  \item Charge
-  \item Ions.Score
-  \item Spectrum.File
-  \item Quan.Info
-  \item Channels : 126, ..., 131
+\item Master.Protein.Accessions
+\item Protein.Accessions
+\item Annotated.Sequence
+\item Charge
+\item Ions.Score
+\item Spectrum.File
+\item Quan.Info
+\item Channels : 126, ..., 131
 }
 }
 \examples{

@@ -4,3 +4,6 @@
 ^codecov\.yml$
 ^\.vscode$
 ^[\.]?air\.toml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

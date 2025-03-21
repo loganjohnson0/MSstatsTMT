@@ -11,13 +11,13 @@ A set of tools for detecting differentially abundant peptides and proteins in sh
 \section{functions }{
 
 \itemize{
-  \item \code{\link{PDtoMSstatsTMTFormat}} : generates MSstatsTMT required input format for Proteome discoverer output.
-  \item \code{\link{MaxQtoMSstatsTMTFormat}} : generates MSstatsTMT required input format for MaxQuant output.
-  \item \code{\link{SpectroMinetoMSstatsTMTFormat}} : generates MSstatsTMT required input format for SpectroMine output.
-  \item \code{\link{OpenMStoMSstatsTMTFormat}} : generates MSstatsTMT required input format for OpenMS output.
-  \item \code{\link{proteinSummarization}} : summarizes PSM level quantification to protein level quantification.
-  \item \code{\link{dataProcessPlotsTMT}} : visualizes for explanatory data analysis.
-  \item \code{\link{groupComparisonTMT}} : tests for significant changes in protein abundance across conditions.
+\item \code{\link[=PDtoMSstatsTMTFormat]{PDtoMSstatsTMTFormat()}} : generates MSstatsTMT required input format for Proteome discoverer output.
+\item \code{\link[=MaxQtoMSstatsTMTFormat]{MaxQtoMSstatsTMTFormat()}} : generates MSstatsTMT required input format for MaxQuant output.
+\item \code{\link[=SpectroMinetoMSstatsTMTFormat]{SpectroMinetoMSstatsTMTFormat()}} : generates MSstatsTMT required input format for SpectroMine output.
+\item \code{\link[=OpenMStoMSstatsTMTFormat]{OpenMStoMSstatsTMTFormat()}} : generates MSstatsTMT required input format for OpenMS output.
+\item \code{\link[=proteinSummarization]{proteinSummarization()}} : summarizes PSM level quantification to protein level quantification.
+\item \code{\link[=dataProcessPlotsTMT]{dataProcessPlotsTMT()}} : visualizes for explanatory data analysis.
+\item \code{\link[=groupComparisonTMT]{groupComparisonTMT()}} : tests for significant changes in protein abundance across conditions.
 }
 }
 
@@ -30,17 +30,17 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Devon Kohler \email{kohler.d@northeastern.edu}
+\strong{Maintainer}: Devon Kohler \email{kohler.d@northeastern.edu} (\href{https://orcid.org/0000-0001-7301-2596}{ORCID})
 
 Authors:
 \itemize{
-  \item Ting Huang \email{thuang0703@gmail.com}
-  \item Meena Choi \email{mnchoi67@gmail.com}
-  \item Mateusz Staniak \email{mtst@mstaniak.pl}
+  \item Ting Huang \email{thuang0703@gmail.com} (\href{https://orcid.org/0000-0003-1041-2167}{ORCID})
+  \item Meena Choi \email{mnchoi67@gmail.com} (\href{https://orcid.org/0000-0002-6025-5035}{ORCID})
+  \item Mateusz Staniak \email{mtst@mstaniak.pl} (\href{https://orcid.org/0000-0002-4453-2178}{ORCID})
   \item Tony Wu \email{wu.anthon@northeastern.edu}
   \item Deril Raju \email{raju.d@northeastern.edu}
   \item Sicheng Hao \email{hao.sic@husky.neu.edu}
-  \item Olga Vitek \email{o.vitek@northeastern.edu}
+  \item Olga Vitek \email{o.vitek@northeastern.edu} (\href{https://orcid.org/0000-0003-1728-1104}{ORCID})
 }
 
 }

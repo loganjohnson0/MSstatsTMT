@@ -39,11 +39,11 @@ for this category, else you should input the average of power you expect. Defaul
 
 \item{verbose}{logical. If TRUE, information about data processing wil be printed to the console.}
 
-\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If `append = TRUE`, has to be a valid path to a file.}
+\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If \code{append = TRUE}, has to be a valid path to a file.}
 }
 \value{
 data.frame - sample size calculation results including varibles:
-  desiredFC, numSample, FDR,  and power.
+desiredFC, numSample, FDR,  and power.
 }
 \description{
 Calculate sample size for future experiments of a TMT experiment
@@ -53,10 +53,10 @@ based on intensity-based linear model. Two options of the calculation:
 }
 \details{
 The function fits the model and uses variance components to calculate
-  sample size. The underlying model fitting with intensity-based linear model with
-  technical MS run replication. Estimated sample size is rounded to 0 decimal.
-  The function can only obtain either one of the categories of the sample size
-  calculation (numSample, numPep, numTran, power) at the same time.
+sample size. The underlying model fitting with intensity-based linear model with
+technical MS run replication. Estimated sample size is rounded to 0 decimal.
+The function can only obtain either one of the categories of the sample size
+calculation (numSample, numPep, numTran, power) at the same time.
 }
 \examples{
 data(input.pd)
@@ -71,10 +71,17 @@ head(test.pairwise$ComparisonResult)
 
 ## Calculate sample size for future experiments:
 #(1) Minimal number of biological replicates per condition
-designSampleSizeTMT(data=test.pairwise$FittedModel, numSample=TRUE,
-                 desiredFC=c(1.25,1.75), FDR=0.05, power=0.8)
+designSampleSizeTMT(
+  data = test.pairwise$FittedModel,
+  numSample = TRUE,
+  desiredFC = c(1.25, 1.75),
+  FDR = 0.05,
+  power = 0.8)
 #(2) Power calculation
-designSampleSizeTMT(data=test.pairwise$FittedModel, numSample=2,
-                 desiredFC=c(1.25,1.75), FDR=0.05, power=TRUE)
-
+designSampleSizeTMT(
+  data = test.pairwise$FittedModel,
+  numSample = 2,
+  desiredFC = c(1.25, 1.75),
+  FDR = 0.05,
+  power = TRUE)
 }

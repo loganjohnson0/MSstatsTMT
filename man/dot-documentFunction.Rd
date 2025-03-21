@@ -35,7 +35,7 @@
 
 \item{verbose}{logical. If TRUE, information about data processing wil be printed to the console.}
 
-\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If `append = TRUE`, has to be a valid path to a file.}
+\item{log_file_path}{character. Path to a file to which information about data processing will be saved. If not provided, such a file will be created automatically. If \code{append = TRUE}, has to be a valid path to a file.}
 }
 \value{
 NULL.
