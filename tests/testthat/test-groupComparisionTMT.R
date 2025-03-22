@@ -1,5 +1,3 @@
-context("groupComparision")
-
 test_that("groupComparision works", {
   output <- groupComparisonTMT(
     data = MSstatsTMT::quant.pd.msstats,
