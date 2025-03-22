@@ -2,7 +2,7 @@
 title: "Introduction to MSstatsTMT"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{MSstatsTMT User Guide}
+  %\VignetteIndexEntry{Introduction to MSstatsTMT}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
