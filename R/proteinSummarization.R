@@ -112,7 +112,6 @@ proteinSummarization = function(
 #' @return data.table
 #'
 #' @keywords internal
-#'
 getProcessedTMT = function(summarized, input) {
   if (is.list(summarized) & !is.data.table(summarized)) {
     processed = summarized[[2]]
@@ -135,7 +134,6 @@ getProcessedTMT = function(summarized, input) {
 #' @return data.table
 #'
 #' @keywords internal
-#'
 getSummarizedTMT = function(summarized) {
   if (is.list(summarized) & !is.data.table(summarized)) {
     summarized = summarized[[1]]
@@ -156,7 +154,6 @@ getSummarizedTMT = function(summarized) {
   ]
 }
 
-
 #' Prepare output of MSstatsTMT converters for protein-level summarization
 #'
 #' @inheritParams proteinSummarization
@@ -164,7 +161,6 @@ getSummarizedTMT = function(summarized) {
 #' @return data.table
 #'
 #' @keywords internal
-#'
 MSstatsPrepareForSummarizationTMT = function(
   data,
   method,

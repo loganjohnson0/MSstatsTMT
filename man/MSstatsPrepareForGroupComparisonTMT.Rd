@@ -7,7 +7,8 @@
 MSstatsPrepareForGroupComparisonTMT(
   input,
   remove_norm_channel,
-  remove_empty_channel
+  remove_empty_channel,
+  call = rlang::caller_env()
 )
 }
 \arguments{

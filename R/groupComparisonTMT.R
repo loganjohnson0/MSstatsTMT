@@ -121,12 +121,52 @@ groupComparisonTMT = function(
 MSstatsPrepareForGroupComparisonTMT = function(
   input,
   remove_norm_channel,
-  remove_empty_channel
+  remove_empty_channel,
+  call = rlang::caller_env()
 ) {
   Condition <- Abundance <- NULL
 
   input = data.table::as.data.table(input)
-  input = .checkGroupComparisonInput(input)
+
+  required_cols = c(
+    "Protein",
+    "BioReplicate",
+    "Abundance",
+    "Run",
+    "Channel",
+    "Condition",
+    "TechRepMixture",
+    "Mixture"
+  )
+
+  num_missing <- length(required_cols[!required_cols %in% colnames(input)])
+
+  if (num_missing > 0) {
+    name_missing <- data.table(required_cols[
+      !required_cols %in% colnames(input)
+    ])
+    name_missing <- name_missing[order(name_missing)]
+
+    msg <- c(
+      i = "Error in the expected column input.",
+      x = "Missing {.val {num_missing}} column{?s} required for {.fn groupComparisonTMT}:"
+    )
+    col_msg <- paste0(
+      "{.arg {name_missing[",
+      seq_len(nrow(name_missing)),
+      "]}}"
+    )
+    names(col_msg) <- rep("*", nrow(name_missing))
+    cli::cli_abort(c(msg, col_msg), call = call)
+  }
+
+  if (data.table::uniqueN(input$Condition) < 2) {
+    cond_missing <- unique(final$ProteinLevelData$Condition)
+    cli::cli_abort(c(
+      "Only {.val {length(cond_missing)}} level ({.field {cond_missing}}) is present in {.envvar Condition}.",
+      i = "Please supply {.val {2}} or more levels for {.fn groupComparisonTMT}."
+    ))
+  }
 
   if (remove_empty_channel & is.element("Empty", unique(input$Condition))) {
     input = input[Condition != "Empty", ]
