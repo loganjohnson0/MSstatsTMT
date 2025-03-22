@@ -47,7 +47,6 @@
 #' contrast.matrix = comparison,
 #' moderated = TRUE)
 #' head(test.contrast$ComparisonResult)
-#'
 groupComparisonTMT = function(
   data,
   contrast.matrix = "pairwise",
@@ -119,7 +118,6 @@ groupComparisonTMT = function(
 #' @return data.table
 #'
 #' @keywords internal
-#'
 MSstatsPrepareForGroupComparisonTMT = function(
   input,
   remove_norm_channel,
@@ -163,7 +161,6 @@ MSstatsPrepareForGroupComparisonTMT = function(
 #' @return list
 #'
 #' @keywords internal
-#'
 MSstatsFitComparisonModelsTMT = function(input) {
   Abundance = Group = Protein = NULL
   Channel = Mixture = Run = Subject = TechRepMixture = NULL
@@ -249,7 +246,6 @@ MSstatsFitComparisonModelsTMT = function(input) {
 #' @return list
 #'
 #' @keywords internal
-#'
 MSstatsComparisonModelSingleTMT = function(single_protein, protein_name) {
   Run <- Channel <- Subject <- Group <- Mixture <- TechRepMixture <- NULL
 
@@ -289,7 +285,6 @@ MSstatsComparisonModelSingleTMT = function(single_protein, protein_name) {
 #' @return list
 #'
 #' @keywords internal
-#'
 MSstatsModerateTTest = function(summarized, fitted_models, moderated) {
   variance_df <- variance <- Protein <- NULL
 
@@ -327,7 +322,6 @@ MSstatsModerateTTest = function(summarized, fitted_models, moderated) {
 #' @return data.table
 #'
 #' @keywords internal
-#'
 MSstatsGroupComparisonTMT = function(fitted_models, contrast_matrix) {
   msg = paste0("Testing for ", length(fitted_models), " proteins:")
   getOption("MSstatsTMTLog")("INFO", msg)
@@ -355,7 +349,6 @@ MSstatsGroupComparisonTMT = function(fitted_models, contrast_matrix) {
 #' @return list
 #'
 #' @keywords internal
-#'
 MSstatsTestSingleProteinTMT = function(fitted_model, contrast_matrix) {
   single_protein = fitted_model[["data"]]
   groups = as.character(unique(single_protein$Group))
@@ -468,7 +461,6 @@ MSstatsTestSingleProteinTMT = function(fitted_model, contrast_matrix) {
 #' @return data.table
 #'
 #' @keywords internal
-#'
 MSstatsGroupComparisonOutputTMT = function(testing_results, adj_method) {
   adj.pvalue <- pvalue <- Protein <- Comparison <- log2FC <- SE <- DF <- issue <- NULL
 

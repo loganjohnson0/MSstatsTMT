@@ -88,16 +88,18 @@ and generate two types of figures in pdf files as output :
 }
 \examples{
 data(input.pd)
-quant.msstats = proteinSummarization(input.pd,
-                                     method = "msstats",
-                                     global_norm = TRUE,
-                                     reference_norm = TRUE)
+quant.msstats = proteinSummarization(
+  input.pd,
+  method = "msstats",
+  global_norm = TRUE,
+  reference_norm = TRUE)
 
 ## Profile plot
-dataProcessPlotsTMT(data = quant.msstats,
-                    type = 'ProfilePlot',
-                    width = 21,
-                    height = 7)
+dataProcessPlotsTMT(
+  data = quant.msstats,
+  type = 'ProfilePlot',
+  width = 21,
+  height = 7)
 
 ## NottoRun: QC plot
 # dataProcessPlotsTMT(data=quant.msstats,

@@ -32,7 +32,7 @@ Default is TRUE. It will be performed before protein-level summarization.}
 on protein level data.
 \itemize{
 \item TRUE (default): needs at least one reference channel in each MS run,
-annotated by 'Norm' in Condtion column. It will be performed after
+annotated by 'Norm' in Condition column. It will be performed after
 protein-level summarization.
 \item FALSE: no reference channel normalization.
 If data only has one run, then reference_norm=FALSE.

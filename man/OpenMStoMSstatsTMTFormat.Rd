@@ -48,5 +48,4 @@ Generate MSstatsTMT required input format for OpenMS output
 head(raw.om)
 input.om <- OpenMStoMSstatsTMTFormat(raw.om)
 head(input.om)
-
 }

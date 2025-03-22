@@ -76,5 +76,4 @@ test.contrast = groupComparisonTMT(data = quant.pd.msstats,
 contrast.matrix = comparison,
 moderated = TRUE)
 head(test.contrast$ComparisonResult)
-
 }

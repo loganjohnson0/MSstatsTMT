@@ -59,5 +59,4 @@ head(raw.pd)
 head(annotation.pd)
 input.pd <- PDtoMSstatsTMTFormat(raw.pd, annotation.pd)
 head(input.pd)
-
 }

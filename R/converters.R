@@ -56,7 +56,6 @@
 #' head(annotation.mq)
 #' input.mq <- MaxQtoMSstatsTMTFormat(evidence, proteinGroups, annotation.mq)
 #' head(input.mq)
-#'
 MaxQtoMSstatsTMTFormat = function(
   evidence,
   proteinGroups,
@@ -124,8 +123,8 @@ MaxQtoMSstatsTMTFormat = function(
   input
 }
 
-
 #' Generate MSstatsTMT required input format for OpenMS output
+#'
 #' @param input MSstatsTMT report from OpenMS
 #' @param useUniquePeptide TRUE(default) removes peptides that are assigned for more than one proteins. We assume to use unique peptide for each protein.
 #' @param rmPSM_withfewMea_withinRun TRUE (default) will remove the features that have 1 or 2 measurements within each Run.
@@ -142,7 +141,6 @@ MaxQtoMSstatsTMTFormat = function(
 #' head(raw.om)
 #' input.om <- OpenMStoMSstatsTMTFormat(raw.om)
 #' head(input.om)
-#'
 OpenMStoMSstatsTMTFormat = function(
   input,
   useUniquePeptide = TRUE,
@@ -225,7 +223,6 @@ OpenMStoMSstatsTMTFormat = function(
 #' head(annotation.pd)
 #' input.pd <- PDtoMSstatsTMTFormat(raw.pd, annotation.pd)
 #' head(input.pd)
-#'
 PDtoMSstatsTMTFormat <- function(
   input,
   annotation,
@@ -314,7 +311,6 @@ PDtoMSstatsTMTFormat <- function(
 #' head(annotation.mine)
 #' input.mine <- SpectroMinetoMSstatsTMTFormat(raw.mine, annotation.mine)
 #' head(input.mine)
-#'
 SpectroMinetoMSstatsTMTFormat <- function(
   input,
   annotation,

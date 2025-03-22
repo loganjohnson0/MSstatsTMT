@@ -278,6 +278,7 @@
 }
 
 ## check whether single subject per mixture and group
+#' @import data.table
 #' @keywords internal
 .checkSingleSubject = function(annotation) {
   Subject <- NULL
@@ -293,7 +294,10 @@
 #' @keywords internal
 .checkTechReplicate = function(annotation) {
   Run <- NULL
-  count_runs = annotation[, .(NumRuns = uniqueN(Run)), by = c("Mixture")]
+  count_runs = annotation[,
+    .(NumRuns = data.table::uniqueN(Run)),
+    by = c("Mixture")
+  ]
   any(count_runs$NumRuns > 1)
 }
 
@@ -301,14 +305,14 @@
 ## check whether there are multiple biological mixtures
 #' @keywords internal
 .checkMulBioMixture = function(annotation) {
-  uniqueN(annotation$Mixture) > 1
+  data.table::uniqueN(annotation$Mixture) > 1
 }
 
 
 # check whether there is only single run
 #' @keywords internal
 .checkSingleRun = function(annotation) {
-  uniqueN(annotation$Run) == 1
+  data.table::uniqueN(annotation$Run) == 1
 }
 
 # check whether the data has repeated measures

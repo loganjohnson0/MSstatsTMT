@@ -62,5 +62,4 @@ head(proteinGroups)
 head(annotation.mq)
 input.mq <- MaxQtoMSstatsTMTFormat(evidence, proteinGroups, annotation.mq)
 head(input.mq)
-
 }
